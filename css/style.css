@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+ul li {
+  list-style-type: none !important;
+}
+a {
+  text-decoration: none !important;
+}
+.main {
+  display: flex;
+  transition: all 0.5s linear;
+}
+.main_content_body .content_main_header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.sidebar_header a img {
+  height: 85px;
+  width: 175px;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  padding: 0 8px;
+  background-color: #0e658c;
+  transition: all 0.5s linear;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+  transition: all 0.5s linear;
+}
+#sidebar .fixed_sidebar_items {
+  position: fixed;
+  width: 235px;
+}
+#sidebar .siderbar_header {
+  padding: 15px;
+  background-color: #666;
+}
+
+#sidebar .menu_list ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #057aae;
+}
+#sidebar .menu_list ul li:last-child {
+  border-bottom: none !important;
+}
+
+#sidebar .menu_list ul li a {
+  font-size: 14px;
+  color: #fff;
+  padding: 5px;
+  display: block;
+}
+
+#sidebar .menu_list ul li.active > a,
+a[aria-expanded='true'] {
+  color: #fff;
+  background-color: #057aae;
+}
+
+a[data-toggle='collapse'] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 12px !important;
+  padding-left: 30px !important;
+}
+
+.custom_nav_header {
+  background-color: #f7f7f7;
+  padding: 0 !important;
+  border-bottom: 1px solid #b2afaa;
+}
+.nav_btn_body {
+  padding-bottom: 0px !important;
+}
+.nav_btn_body ul li {
+  display: inline-block;
+  border-right: 1px solid #b2afaa;
+}
+.nav_btn_body ul {
+  margin-bottom: 0px !important;
+}
+.nav_btn_body ul li:last-child {
+  border-right: none !important;
+}
+.contents {
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.sub_drops ul li {
+  border: none !important;
+}
+.main_content_body {
+  width: 100%;
+}
+/* icon button css start */
+.menu_btn {
+  position: relative;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  display: inline-block;
+  box-shadow: none !important;
+  color: #b2afaa !important;
+}
+#nav-icon1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: -3px;
+}
+#nav-icon1 span {
+  display: block;
+  height: 3px;
+  /* position: absolute; */
+  width: 25px;
+  margin: 8px auto;
+  background: #b2afaa;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#nav-icon1 span:nth-child(1) {
+  /* top: 0px; */
+  top: 17px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position: absolute;
+  left: 20px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 18px;
+  transform: scale(0);
+}
+
+#nav-icon1 span:nth-child(3) {
+  /* top: 36px; */
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+#nav-icon1.open span:nth-child(1) {
+  /* top: 18px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg); */
+  top: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  position: absolute;
+  left: 20px;
+}
+
+#nav-icon1.open span:nth-child(2) {
+  transform: scale(1);
+  position: relative;
+  top: 2px;
+  left: 0px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  /* top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); */
+  top: 36px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.close_side_menu {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  /* nav icon */
+
+  #nav-icon1 {
+    display: none;
+  }
+
+  .close_side_menu {
+    display: block;
+    position: absolute;
+    height: 32px;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .close_side_menu h2 {
+    font-size: 16px;
+    color: #fff;
+    margin: auto;
+    line-height: 32px;
+  }
+  #sidebar {
+    position: fixed;
+    z-index: 99;
+    margin-left: -250px;
+    padding-top: 50px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.dlt_img {
+  height: 18px;
+}
+/* debit vouche part start */
+.debit_voucher_body {
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+}
+.debit_voucher_top_contents {
+  padding: 8px;
+  border-bottom: 1px solid#d6d6d6;
+  background: -webkit-linear-gradient(#fff, #eaeaea);
+  background: -moz-linear-gradient(#fff, #eaeaea);
+  background: linear-gradient(#fff, #eaeaea);
+}
+.debit_voucher_top_contents p {
+  padding: 5px 15px;
+  border-radius: 30px;
+  display: inline;
+  text-align: center;
+  /* width: 25%; */
+  background: linear-gradient(#eaeaea, #fff);
+  margin: auto 0;
+}
+
+.voucher_info_form {
+  padding: 30px;
+}
+
+.voucher_tables_tab {
+  padding: 30px;
+}
+.srch_control {
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 30px;
+  border: 1px solid #b2afaa !important;
+  padding: 10px;
+}
+.button_search {
+  background-color: #05ae4b;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px 28px;
+  border-radius: 30px;
+}
+
+.custom_padding {
+  padding: 50px;
+}
+.avatar_img {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+.avatar_img img {
+  height: 100%;
+  width: 100%;
+}
+.search_op {
+  padding: 30px;
+}
+.user_group_tbl {
+  padding: 30px;
+}
+@media (max-width: 576px) {
+  .custom_padding {
+    padding: 0px;
+  }
+  .debit_voucher_top_contents p {
+    width: 100%;
+  }
+  .voucher_info_form {
+    padding: 0 8px;
+  }
+  .voucher_details {
+    overflow-x: scroll;
+  }
+}
+
+.actions_body {
+  padding: 0 30px;
+  padding-bottom: 30px;
+  text-align: right;
+}
+.actions {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+.find_bulk {
+  padding: 30px;
+}
+
+.find_bulk_content {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+}
+
+.bulk_list_main {
+  padding: 30px;
+}
+.bulk_list_content {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+}
+
+.reports_left {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+}
+/* ======================================== */
+.collapsible {
+  color: #444;
+  cursor: pointer;
+  /* height: 10px;
+  width: 10px; */
+  border: none;
+  display: inline-block;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  background: transparent !important;
+  outline: none !important;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.collapsible::before {
+  content: '\02795';
+  font-size: 13px;
+  color: white;
+  float: left;
+  margin-right: 8px;
+  margin-left: 5px;
+  border: 1px solid #484848;
+}
+
+.active_colls::before {
+  content: '\2796'; /* Unicode character for "minus" sign (-) */
+}
+
+.sidebar_clock {
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid #057aae;
+  text-align: center;
+}
+.sidebar_clock ul li {
+  display: inline-block;
+  margin: auto 10px;
+  line-height: 45px;
+}
+.sidebar_clock ul li span {
+  color: #fff;
+  font-size: 16px;
+}

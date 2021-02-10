@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Voucher</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<section class="main">
+       <!-- sidebar section start -->
+    <nav id="sidebar">
+        <div class="close_side_menu" onclick="toggleSidebar()">
+            <h2>Close</h2>
+        </div>
+        <div class="sidebar_clock">
+            <ul>
+                <li><span id="hour"></span></li>
+                <li><span id="minute"></span></li>
+                <li><span id="seconds"></span></li>
+            </ul>
+        </div>
+        <div class="sidebar_header">
+            <a href=""><img src="./images/web.png" alt=""></a>
+        </div>
+        <div class="menu_list">
+            <ul>
+                <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
+                <li class=""><a  data-toggle="collapse" href="#generalAccounts" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
+                  </a>
+                
+                  <div class="collapse sub_drops" id="generalAccounts">
+                    <ul>
+                        <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
+                        <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
+                        <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
+                        <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
+                        <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
+                <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
+                  </a>
+                
+                  <div class="collapse sub_drops" id="accountsReport">
+                    <ul>
+                        <li><a href="reports.html">-- Reports</a></li>
+                        <li><a href="reports_settings.html">-- Report Settings</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
+                 <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
+                  </a>
+                
+                  <div class="collapse sub_drops" id="genAccSetup">
+                    <ul>
+                        <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
+                        <li><a href="bank_setup.html">-- Bank Setup</a></li>
+                        <li><a href="financial_year.html">-- Financial Year</a></li>
+                        <li><a href="company_setup.html">-- Company Setup</a></li>
+                        <li><a href="level_setup.html">-- Level Setup</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
+                     </a>
+                   
+                     <div class="collapse sub_drops" id="userNoti">
+                       <ul>
+                           <li><a href="noti_setup.html">-- Notification Setup</a></li>
+                        
+                       </ul>
+                     </div>
+                   
+                   </li>
+                   <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
+                     </a>
+                   
+                     <div class="collapse sub_drops" id="administrator">
+                       <ul>
+                           <li><a href="user_info.html">-- User Info</a></li>
+                           <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
+                           <li><a href="user_permission.html">-- User Permission</a></li>
+                           <li><a href="user_group.html">-- User Group</a></li>
+                       </ul>
+                     </div>
+                   
+                   </li>
+            </ul>
+        </div>
+    </nav>
+      <!-- sidebar section end -->
+
+
+    <!-- Content body part start -->
+    <div class="main_content_body">
+        <header class="content_main_header">
+            <nav class="navbar navbar-expand-lg custom_nav_header py-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 my-0" >
+                            <div class="nav_btn_body">
+                                <ul>
+                                    <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" onclick="toggleSidebar()">
+                                        <div id="nav-icon1">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <span>Menu</span>
+                                    </a></li>
+                                    <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" >
+                                        <div id="nav-icon1">
+                                            <i class="fas fa-clipboard-list"></i>
+                                        </div>
+                                        <span>Report</span>
+                                    </a></li>
+                                    <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" >
+                                        <div id="nav-icon1">
+                                            <i class="fas fa-download"></i>
+                                        </div>
+                                        <span>Backup</span>
+                                    </a></li>
+                                </ul>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+       
+        <section class="contents">
+            <div class="container-fluid">
+                <div class="debit_voucher_body">
+                    <div class="debit_voucher_top_contents">
+                        <p>Journal Voucher</p>
+                    </div>
+                    <div class="voucher_info_form">
+                        <form action="">
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label>Voucher Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Voucher No</label>
+                                    <input type="text" class="form-control" readonly placeholder="500">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Created By</label>
+                                    <input type="text" class="form-control" readonly placeholder="Administrator">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Manual Voucher No.</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Reference No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Bank/Case status :</label>
+                                    <input type="text" class="form-control" readonly placeholder="0.00">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Particulars</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Voucher details & voucher history table -->
+                   <div class="voucher_tables_tab">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 px-2">
+                         <ul class="nav nav-tabs" id="myTab" role="tablist">
+                             <li class="nav-item">
+                               <a class="nav-link active" id="voucher_details-tab" data-toggle="tab" href="#voucher_details" role="tab" aria-controls="voucher_details" aria-selected="true">Voucher Details</a>
+                             </li>
+                             <li class="nav-item">
+                               <a class="nav-link" id="voucher_history-tab" data-toggle="tab" href="#voucher_history" role="tab" aria-controls="voucher_history" aria-selected="false">Voucher History</a>
+                             </li>
+     
+                           </ul>
+                           <div class="tab-content" id="myTabContent">
+                             <div class="tab-pane fade show active voucher_details" id="voucher_details" role="tabpanel" aria-labelledby="voucher_details-tab">
+                                 <table class="table table-striped table-bordered table-condensed" cellspacing="0" rules="all" border="1" id="MainContent_tabVch_tpVchDtl_dgVoucherDtl" style="border-collapse:collapse;">
+                                     <tbody><tr>
+                                         <th scope="col">&nbsp;</th><th scope="col">Line#</th><th scope="col">COA Code</th><th scope="col">COA Description</th><th scope="col" style="white-space:nowrap;">Debit</th><th scope="col">Credit</th>
+                                     </tr><tr>
+                                         <td align="center" style="font-size:8pt;width:17px;">
+                                                                                     <input class="dlt_img" type="image" name="" id="" text="Delete" src="images/trash-solid.svg" align="middle">
+                                                                                 </td><td align="center" style="width:70px;">
+                                                                                     <input name="" type="text" value="1" maxlength="4" id="" class="form-control input-sm">
+                                                                                 </td><td style="font-size:8pt;height:18px;width:90px;">
+                                                                                     <input name="" type="text" onchange="javascript:setTimeout('__doPostBack(\'\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="" class="form-control input-sm">
+                                                                                 </td><td align="left" style="font-size:8pt;width:300px;">
+                                                                                     <input name="" type="text" maxlength="150" onchange="javascript:setTimeout('__doPostBack(\'\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="" autocomplete="off" placeholder="Search  Chart-of-Account.." class="form-control input-sm">
+                                                                                     
+                                                                                 </td><td align="right" style="font-size:8pt;width:100px;">
+                                                                                     <input name="" type="text" value="0.00" maxlength="25" onchange="javascript:setTimeout('__doPostBack(\'\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;return isNumber(event)" id="" onfocus="this.select()" class="form-control input-sm" style="text-align: right">
+                                                                                 </td><td align="right" style="font-size:8pt;width:100px;">
+                                                                                     <input name="" type="text" value="0.00" maxlength="25" onchange="javascript:setTimeout('__doPostBack(\'\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;return isNumber(event)" id="" onfocus="this.select()" class="form-control input-sm" style="text-align: right">
+                                                                                 </td>
+                                     </tr><tr style="font-weight:bold;">
+                                         <td></td><td></td><td></td><td>Total</td><td align="right">0.00</td><td align="right">0.00</td>
+                                     </tr>
+                                 </tbody></table>
+                             </div>
+                             <div class="tab-pane fade" id="voucher_history" role="tabpanel" aria-labelledby="voucher_history-tab">
+                                <section class="card">
+                                    <div class="debit_voucher_top_contents">
+                                        <p><i class="fas fa-search mr-1"></i>Search Option</p>
+                                    </div>
+                                    <div class="card-body row">
+                                        <div class="col-md-3">
+                                            <label for="txtCode" class="control-label">Search by voucher no :</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input name="" type="text" id="" placeholder="Input Voucher No and click Find Button" class="form-control srch_control">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="submit" name="" value="Find" id="" title="Find" class="btn button_search">
+                                        </div>
+                                        <div class="col-md-12 pt-5">
+                                            <div class="responsive">
+                                                <div>
+                                        <table class="table table-striped table-bordered table-condensed" cellspacing="0" rules="all" border="1" id="MainContent_tabVch_tpVchHist_dgVoucher" style="border-collapse:collapse;">
+                                        <tbody><tr>
+                                        <th scope="col">&nbsp;</th><th scope="col">Voucher No</th><th scope="col">M.V. NO</th><th scope="col">Voucher Type</th><th scope="col">Voucher Date</th><th scope="col">Particulars</th><th scope="col">Amount</th><th scope="col">Status</th>
+                                        </tr><tr>
+                                        <td align="center" style="width:40px;"><a href="javascript:void(0)">Select</a></td><td>000</td><td>&nbsp;</td><td>DV-0</td><td>08/02/2021</td><td align="left" style="height:20px;">Bill</td><td align="right">0.00</td><td align="center">U</td>
+                                        </tr><tr>
+                                        <td align="center" style="width:40px;"><a href="javascript:void(0)">Select</a></td><td>000</td><td>&nbsp;</td><td>DV-0</td><td>08/02/2021</td><td align="left" style="height:20px;">Net Bill</td><td align="right">0.00</td><td align="center">U</td>
+                                        </tr><tr>
+                                        <td align="center" style="width:40px;"><a href="javascript:void(0)">Select</a></td><td>000</td><td>&nbsp;</td><td>DV-0</td><td>08/02/2021</td><td align="left" style="height:20px;">Utilities bill</td><td align="right">0.00</td><td align="center">U</td>
+                                        </tr>
+                                        </tbody></table>
+                                        </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                             </div>
+                           </div>
+                        </div>
+                    </div>
+                   </div>
+
+               <div class="actions_body">
+                   <div class="actions">
+                    <button class="action_btns btn btn-danger"><i class="far fa-trash-alt mr-1"></i>Delete</button>
+                    <button class="btn btn-success"><i class="far fa-save mr-1"></i>Save</button>
+                    <button class="btn btn-secondary"><i class="fas fa-ban mr-1"></i>Clear</button>
+                    <button class="btn btn-dark"><i class="fas fa-print mr-1"></i>print</button>
+                   </div>
+               </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Content body part end -->
+</section>
+  
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        function toggleSidebar() {
+        var sidebarDiv = document.getElementById("sidebar");
+        var icon = document.getElementById("nav-icon1");
+        sidebarDiv.classList.toggle("active");
+        icon.classList.toggle("open");
+}
+    </script>
+</body>
+</html>

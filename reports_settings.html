@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report settings</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <section class="main">
+         <!-- sidebar section start -->
+    <nav id="sidebar">
+        <div class="close_side_menu" onclick="toggleSidebar()">
+            <h2>Close</h2>
+        </div>
+        <div class="sidebar_clock">
+            <ul>
+                <li><span id="hour"></span></li>
+                <li><span id="minute"></span></li>
+                <li><span id="seconds"></span></li>
+            </ul>
+        </div>
+        <div class="sidebar_header">
+            <a href=""><img src="./images/web.png" alt=""></a>
+        </div>
+        <div class="menu_list">
+            <ul>
+                <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
+                <li class=""><a  data-toggle="collapse" href="#generalAccounts" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
+                  </a>
+                
+                  <div class="collapse sub_drops" id="generalAccounts">
+                    <ul>
+                        <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
+                        <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
+                        <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
+                        <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
+                        <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
+                <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
+                  </a>
+                
+                  <div class="collapse sub_drops" id="accountsReport">
+                    <ul>
+                        <li><a href="reports.html">-- Reports</a></li>
+                        <li><a href="reports_settings.html">-- Report Settings</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
+                 <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
+                  </a>
+                
+                  <div class="collapse sub_drops" id="genAccSetup">
+                    <ul>
+                        <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
+                        <li><a href="bank_setup.html">-- Bank Setup</a></li>
+                        <li><a href="financial_year.html">-- Financial Year</a></li>
+                        <li><a href="company_setup.html">-- Company Setup</a></li>
+                        <li><a href="level_setup.html">-- Level Setup</a></li>
+                    </ul>
+                  </div>
+                
+                </li>
+                <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
+                     </a>
+                   
+                     <div class="collapse sub_drops" id="userNoti">
+                       <ul>
+                           <li><a href="noti_setup.html">-- Notification Setup</a></li>
+                        
+                       </ul>
+                     </div>
+                   
+                   </li>
+                   <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
+                    <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
+                     </a>
+                   
+                     <div class="collapse sub_drops" id="administrator">
+                       <ul>
+                           <li><a href="user_info.html">-- User Info</a></li>
+                           <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
+                           <li><a href="user_permission.html">-- User Permission</a></li>
+                           <li><a href="user_group.html">-- User Group</a></li>
+                       </ul>
+                     </div>
+                   
+                   </li>
+            </ul>
+        </div>
+    </nav>
+      <!-- sidebar section end -->
+
+
+        <!-- Content body part start -->
+        <div class="main_content_body">
+            <header class="content_main_header">
+                <nav class="navbar navbar-expand-lg custom_nav_header py-0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 my-0">
+                                <div class="nav_btn_body">
+                                    <ul>
+                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" onclick="toggleSidebar()">
+                                                <div id="nav-icon1">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <span>Menu</span>
+                                            </a></li>
+                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn">
+                                                <div id="nav-icon1">
+                                                    <i class="fas fa-clipboard-list"></i>
+                                                </div>
+                                                <span>Report</span>
+                                            </a></li>
+                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn">
+                                                <div id="nav-icon1">
+                                                    <i class="fas fa-download"></i>
+                                                </div>
+                                                <span>Backup</span>
+                                            </a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="contents">
+                <div class="container-fluid">
+                    <div class="debit_voucher_body">
+                        <div class="debit_voucher_top_contents">
+                            <p>Report Setting for balance sheet & income statement</p>
+                        </div>
+                        <div class="voucher_info_form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label>Report Type Code</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Version No.</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Ref. Type Code</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Ref. Version No.</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Description</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <br>
+
+                                            <div class="responsive">
+                                                <div>
+                                                    <table class="table table-striped table-bordered table-condensed" cellspacing="0" cellpadding="2" rules="all" border="1" id="MainContent_dgMapMst" style="border-collapse:collapse;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="col">&nbsp;</th>
+                                                                <th scope="col">Type Code</th>
+                                                                <th scope="col">Version No</th>
+                                                                <th scope="col">Description</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="color:Blue;width:40px;"><a href="javascript:void(0)" style="color:Blue;">Select</a></td>
+                                                                <td align="center" style="width:100px;">I</td>
+                                                                <td align="center" style="width:90px;">1</td>
+                                                                <td align="left" style="width:350px;">Income Statement of Sundous Limited</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="color:Blue;width:40px;"><a href="javascript:void(0)" style="color:Blue;">Select</a></td>
+                                                                <td align="center" style="width:100px;">B</td>
+                                                                <td align="center" style="width:90px;">2</td>
+                                                                <td align="left" style="width:350px;">Balance Sheet of Sundous Limited</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="color:Blue;width:40px;"><a href="javascript:void(0)" style="color:Blue;">Select</a></td>
+                                                                <td align="center" style="width:100px;">C</td>
+                                                                <td align="center" style="width:90px;">3</td>
+                                                                <td align="left" style="width:350px;">Cash Flow Statement of Sundous Limited</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="responsive">
+                                                <div>
+
+                                                </div>
+                                            </div>
+                                            <div style="display: none;">
+                                                <div>
+
+                                                </div>
+                                                <div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Voucher details & voucher history table -->
+
+
+                        <div class="actions_body">
+                            <div class="actions">
+                                <button class="action_btns btn btn-danger"><i class="far fa-trash-alt mr-1"></i>Delete</button>
+                                <button class="btn btn-success"><i class="far fa-save mr-1"></i>Save</button>
+                                <button class="btn btn-secondary"><i class="fas fa-ban mr-1"></i>Clear</button>
+                                <button class="btn btn-dark"><i class="fas fa-print mr-1"></i>print</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Content body part end -->
+    </section>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            var sidebarDiv = document.getElementById("sidebar");
+            var icon = document.getElementById("nav-icon1");
+            sidebarDiv.classList.toggle("active");
+            icon.classList.toggle("open");
+        }
+
+    </script>
+</body>
+
+</html>
