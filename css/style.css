@@ -404,16 +404,13 @@ ul ul a {
 
 .sidebar_clock {
   height: 45px;
+  line-height: 45px;
   width: 100%;
   border-bottom: 1px solid #057aae;
-  text-align: center;
+  text-align: left;
 }
-.sidebar_clock ul li {
-  display: inline-block;
-  margin: auto 10px;
-  line-height: 45px;
-}
-.sidebar_clock ul li span {
+
+.sidebar_clock p {
   color: #fff;
   font-size: 16px;
 }
