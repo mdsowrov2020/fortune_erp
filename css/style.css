@@ -20,10 +20,43 @@ a {
   z-index: 99;
 }
 .sidebar_header a img {
-  height: 85px;
-  width: 175px;
+  height: 45px;
+  width: 80px;
 }
-
+.top_header_part {
+  height: 45px;
+  width: 100%;
+  padding: 0 27px;
+  background-color: #03a9f4;
+  line-height: 45px;
+}
+.top_header_left {
+  float: left;
+  width: 50%;
+}
+.top_header_left p {
+  font-size: 22px;
+  color: #fff;
+}
+.top_header_right {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.dropdown-menu {
+  margin-right: 60px !important;
+}
+.top_header_right ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.top_header_right .dropdown button {
+  color: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 18px !important;
+}
 #sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -87,14 +120,15 @@ ul ul a {
 .custom_nav_header {
   background-color: #f7f7f7;
   padding: 0 !important;
-  border-bottom: 1px solid #b2afaa;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
 }
 .nav_btn_body {
   padding-bottom: 0px !important;
 }
 .nav_btn_body ul li {
   display: inline-block;
-  border-right: 1px solid #b2afaa;
+  border-right: 1px solid #e7e7e7;
 }
 .nav_btn_body ul {
   margin-bottom: 0px !important;
@@ -222,8 +256,8 @@ ul ul a {
     display: block;
     position: absolute;
     height: 32px;
-    top: 0;
-    right: 0;
+    top: 1%;
+    right: 5px;
     background-color: red;
     width: 80px;
     text-align: center;
@@ -237,9 +271,8 @@ ul ul a {
   }
   #sidebar {
     position: fixed;
-    z-index: 99;
+    z-index: 100;
     margin-left: -250px;
-    padding-top: 50px;
   }
   #sidebar.active {
     margin-left: 0;
@@ -248,6 +281,16 @@ ul ul a {
     left: 0;
     height: 100%;
     width: 100%;
+  }
+  .sidebar_clock {
+    height: 45px;
+    line-height: 45px;
+    width: 100% !important;
+    padding: 0px 0px !important;
+    border-bottom: 1px solid #057aae;
+    text-align: left;
+    background-color: transparent !important;
+    margin-left: 0px !important;
   }
 }
 
@@ -317,6 +360,38 @@ ul ul a {
   padding: 30px;
 }
 @media (max-width: 576px) {
+  .top_header_part {
+    height: 38%;
+    width: 100%;
+    padding: 0 5px;
+    line-height: 45px;
+    font-size: 10px !important;
+    padding-bottom: 10px;
+  }
+  .top_header_left {
+    width: 100%;
+    display: block;
+    /* height: 35px; */
+  }
+  .top_header_left p {
+    text-align: center;
+    font-size: 20px !important;
+    margin-bottom: 0px !important;
+  }
+  .top_header_right {
+    width: 100%;
+    float: unset;
+    display: block;
+    text-align: center;
+    /* height: 35px; */
+  }
+  .top_header_right .dropdown button {
+    color: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 13px !important;
+  }
   .custom_padding {
     padding: 15px;
   }
@@ -440,9 +515,12 @@ ul ul a {
 .sidebar_clock {
   height: 45px;
   line-height: 45px;
-  width: 100%;
+  width: 260px;
+  padding: 0 14px;
   border-bottom: 1px solid #057aae;
   text-align: left;
+  background-color: #0480b7;
+  margin-left: -16px;
 }
 
 .sidebar_clock p {
