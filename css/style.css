@@ -318,16 +318,54 @@ ul ul a {
 }
 @media (max-width: 576px) {
   .custom_padding {
-    padding: 0px;
+    padding: 15px;
   }
   .debit_voucher_top_contents p {
     width: 100%;
+    font-size: 10px;
   }
   .voucher_info_form {
-    padding: 0 8px;
+    padding: 0px !important;
   }
   .voucher_details {
     overflow-x: scroll;
+  }
+  .contents {
+    padding: 0px;
+    padding-top: 60px;
+  }
+  .actions_body {
+    padding: 0 5px !important;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .actions {
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    padding: 15px 0px !important;
+  }
+  .find_bulk {
+    padding: 10px 0px !important;
+  }
+  .bulk_list_main {
+    padding: 10px 0px !important;
+  }
+  .table_responsive {
+    overflow-x: scroll !important;
+  }
+  .reports_left {
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    padding: 10px 1px !important;
+  }
+  .responsive {
+    overflow-x: scroll !important;
+  }
+  .search_op {
+    padding: 2px !important;
+  }
+  .user_group_tbl {
+    padding: 2px !important;
   }
 }
 
@@ -378,9 +416,6 @@ ul ul a {
   outline: none !important;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-
-/* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
   display: none;
@@ -399,7 +434,7 @@ ul ul a {
 }
 
 .active_colls::before {
-  content: '\2796'; /* Unicode character for "minus" sign (-) */
+  content: '\2796';
 }
 
 .sidebar_clock {
