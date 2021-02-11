@@ -42,10 +42,12 @@ a {
 .top_header_right {
   /* width: 50%; */
   text-align: left;
+  transition: all 0.5s linear;
 }
 
 .top_header_right.add_right_align {
   text-align: right;
+  transition: all 0.5s linear;
 }
 .top_header_right ul {
   margin-bottom: 0px !important;

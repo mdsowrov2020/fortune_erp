@@ -5,6 +5,7 @@ function toggleSidebar() {
   sidebarDiv.classList.toggle('active');
   icon.classList.toggle('open');
   align.classList.toggle('add_right_align');
+  align.style.transition = '.5s';
 }
 
 var coll = document.getElementsByClassName('collapsible');
