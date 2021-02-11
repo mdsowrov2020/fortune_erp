@@ -16,92 +16,92 @@
 
 
     <section class="main">
-        <!-- sidebar section start -->
-    <nav id="sidebar">
-        <div class="close_side_menu" onclick="toggleSidebar()">
-            <h2>Close</h2>
-        </div>
-        <div class="sidebar_clock">
-            <p id="tt"></p>
-        </div>
-        <div class="sidebar_header">
-            <a href=""><img src="./images/web.png" alt=""></a>
-        </div>
-        <div class="menu_list">
-            <ul>
-                <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
-                <li class=""><a  data-toggle="collapse" href="#generalAccounts" class="dropdown-toggle" aria-expanded="false" >
-                    <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
-                  </a>
-                
-                  <div class="collapse sub_drops" id="generalAccounts">
+            <!-- sidebar section start -->
+            <nav id="sidebar">
+                <div class="close_side_menu" onclick="toggleSidebar()">
+                    <h2>Close</h2>
+                </div>
+                <div class="sidebar_clock">
+                    <p id="tt"></p>
+                </div>
+                <div class="sidebar_header">
+                    <a href=""><img src="./images/web.png" alt=""></a>
+                </div>
+                <div class="menu_list" id="accordion">
                     <ul>
-                        <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
-                        <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
-                        <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
-                        <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
-                        <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
-                    </ul>
-                  </div>
-                
-                </li>
-                <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
-                <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
-                  </a>
-                
-                  <div class="collapse sub_drops" id="accountsReport">
-                    <ul>
-                        <li><a href="reports.html">-- Reports</a></li>
-                        <li><a href="reports_settings.html">-- Report Settings</a></li>
-                    </ul>
-                  </div>
-                
-                </li>
-                <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
-                 <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
-                  </a>
-                
-                  <div class="collapse sub_drops" id="genAccSetup">
-                    <ul>
-                        <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
-                        <li><a href="bank_setup.html">-- Bank Setup</a></li>
-                        <li><a href="financial_year.html">-- Financial Year</a></li>
-                        <li><a href="company_setup.html">-- Company Setup</a></li>
-                        <li><a href="level_setup.html">-- Level Setup</a></li>
-                    </ul>
-                  </div>
-                
-                </li>
-                <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
-                    <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
-                     </a>
-                   
-                     <div class="collapse sub_drops" id="userNoti">
-                       <ul>
-                           <li><a href="noti_setup.html">-- Notification Setup</a></li>
+                        <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
+                        <li class=""><a  data-toggle="collapse" href="#generalAccounts" data-target = "#generalAccounts" class="dropdown-toggle" aria-expanded="false"  >
+                            <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
+                          </a>
                         
-                       </ul>
-                     </div>
-                   
-                   </li>
-                   <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
-                    <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
-                     </a>
-                   
-                     <div class="collapse sub_drops" id="administrator">
-                       <ul>
-                           <li><a href="user_info.html">-- User Info</a></li>
-                           <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
-                           <li><a href="user_permission.html">-- User Permission</a></li>
-                           <li><a href="user_group.html">-- User Group</a></li>
-                       </ul>
-                     </div>
-                   
-                   </li>
-            </ul>
-        </div>
-    </nav>
-      <!-- sidebar section end -->
+                          <div class="collapse sub_drops" id="generalAccounts" data-parent="#accordion"> 
+                            <ul>
+                                <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
+                                <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
+                                <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
+                                <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
+                                <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
+                            </ul>
+                          </div>
+                        
+                        </li>
+                        <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
+                        <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
+                          </a>
+                        
+                          <div class="collapse sub_drops" id="accountsReport" data-parent="#accordion">
+                            <ul>
+                                <li><a href="reports.html">-- Reports</a></li>
+                                <li><a href="reports_settings.html">-- Report Settings</a></li>
+                            </ul>
+                          </div>
+                        
+                        </li>
+                        <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
+                         <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
+                          </a>
+                        
+                          <div class="collapse sub_drops" id="genAccSetup" data-parent="#accordion">
+                            <ul>
+                                <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
+                                <li><a href="bank_setup.html">-- Bank Setup</a></li>
+                                <li><a href="financial_year.html">-- Financial Year</a></li>
+                                <li><a href="company_setup.html">-- Company Setup</a></li>
+                                <li><a href="level_setup.html">-- Level Setup</a></li>
+                            </ul>
+                          </div>
+                        
+                        </li>
+                        <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
+                            <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
+                             </a>
+                           
+                             <div class="collapse sub_drops" id="userNoti" data-parent="#accordion">
+                               <ul>
+                                   <li><a href="noti_setup.html">-- Notification Setup</a></li>
+                                
+                               </ul>
+                             </div>
+                           
+                           </li>
+                           <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
+                            <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
+                             </a>
+                           
+                             <div class="collapse sub_drops" id="administrator" data-parent="#accordion">
+                               <ul>
+                                   <li><a href="user_info.html">-- User Info</a></li>
+                                   <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
+                                   <li><a href="user_permission.html">-- User Permission</a></li>
+                                   <li><a href="user_group.html">-- User Group</a></li>
+                               </ul>
+                             </div>
+                           
+                           </li>
+                    </ul>
+                </div>
+            </nav>
+              <!-- sidebar section end -->
 
 
         <!-- Content body part start -->
