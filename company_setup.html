@@ -16,157 +16,168 @@
 
 
     <section class="main">
-          <!-- sidebar section start -->
-          <nav id="sidebar">
-            <div class="close_side_menu" onclick="toggleSidebar()">
-                <h2>Close</h2>
-            </div>
-            <div class="sidebar_clock">
-                <p id="tt"></p>
-            </div>
-            <div class="sidebar_header">
-                <a href=""><img src="./images/web.png" alt=""></a>
-            </div>
-            <div class="menu_list" id="accordion">
-                <ul>
-                    <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
-                    <li class=""><a  data-toggle="collapse" href="#generalAccounts" data-target = "#generalAccounts" class="dropdown-toggle" aria-expanded="false"  >
-                        <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
+               <!-- sidebar section start -->
+    <nav id="sidebar">
+        <div class="fixed_sidebar_items">
+         <div class="close_side_menu" onclick="toggleSidebar()">
+             <h2>Close</h2>
+         </div>
+         <div class="sidebar_clock">
+             <p id="tt"></p>
+         </div>
+         <div class="sidebar_header">
+             <a href=""><img src="./images/web.png" alt=""></a>
+         </div>
+         <div class="menu_list " id="accordion">
+             <ul>
+                 <li><a href="index.html"><span><i class="fas fa-home"></i></span> Home</a></li>
+                 <li class=""><a  data-toggle="collapse" href="#generalAccounts" data-target = "#generalAccounts" class="dropdown-toggle" aria-expanded="false"  >
+                     <span class="mr-1"><i class="far fa-money-bill-alt"></i></span>   General Accounts
+                   </a>
+                 
+                   <div class="collapse sub_drops" id="generalAccounts" data-parent="#accordion"> 
+                     <ul>
+                         <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
+                         <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
+                         <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
+                         <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
+                         <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
+                     </ul>
+                   </div>
+                 
+                 </li>
+                 <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
+                 <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
+                   </a>
+                 
+                   <div class="collapse sub_drops" id="accountsReport" data-parent="#accordion">
+                     <ul>
+                         <li><a href="reports.html">-- Reports</a></li>
+                         <li><a href="reports_settings.html">-- Report Settings</a></li>
+                     </ul>
+                   </div>
+                 
+                 </li>
+                 <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
+                  <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
+                   </a>
+                 
+                   <div class="collapse sub_drops" id="genAccSetup" data-parent="#accordion">
+                     <ul>
+                         <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
+                         <li><a href="bank_setup.html">-- Bank Setup</a></li>
+                         <li><a href="financial_year.html">-- Financial Year</a></li>
+                         <li><a href="company_setup.html">-- Company Setup</a></li>
+                         <li><a href="level_setup.html">-- Level Setup</a></li>
+                     </ul>
+                   </div>
+                 
+                 </li>
+                 <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
+                     <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
                       </a>
                     
-                      <div class="collapse sub_drops" id="generalAccounts" data-parent="#accordion"> 
+                      <div class="collapse sub_drops" id="userNoti" data-parent="#accordion">
                         <ul>
-                            <li><a href="debit_voucher.html">-- Debit Voucher</a></li>
-                            <li><a href="credit_voucher.html">-- Credit Voucher</a></li>
-                            <li><a href="journal_voucher.html">-- Journal Voucher</a></li>
-                            <li><a href="contra_voucher.html">-- Contra Voucher</a></li>
-                            <li><a href="bulk_auth.html">-- Bulk Authorization</a></li>
+                            <li><a href="noti_setup.html">-- Notification Setup</a></li>
+                         
                         </ul>
                       </div>
                     
                     </li>
-                    <li><a  data-toggle="collapse" href="#accountsReport" class="dropdown-toggle" aria-expanded="false" >
-                    <span class="mr-1"><i class="fas fa-chart-pie"></i></span> Accounts Report
+                    <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
+                     <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
                       </a>
                     
-                      <div class="collapse sub_drops" id="accountsReport" data-parent="#accordion">
+                      <div class="collapse sub_drops" id="administrator" data-parent="#accordion">
                         <ul>
-                            <li><a href="reports.html">-- Reports</a></li>
-                            <li><a href="reports_settings.html">-- Report Settings</a></li>
+                            <li><a href="user_info.html">-- User Info</a></li>
+                            <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
+                            <li><a href="user_permission.html">-- User Permission</a></li>
+                            <li><a href="user_group.html">-- User Group</a></li>
                         </ul>
                       </div>
                     
                     </li>
-                    <li><a  data-toggle="collapse" href="#genAccSetup" class="dropdown-toggle" aria-expanded="false" >
-                     <span class="mr-1"><i class="fas fa-wrench"></i></span>   General Accounts Setup
-                      </a>
-                    
-                      <div class="collapse sub_drops" id="genAccSetup" data-parent="#accordion">
-                        <ul>
-                            <li><a href="chart_of_account.html">-- Chart of Accounts</a></li>
-                            <li><a href="bank_setup.html">-- Bank Setup</a></li>
-                            <li><a href="financial_year.html">-- Financial Year</a></li>
-                            <li><a href="company_setup.html">-- Company Setup</a></li>
-                            <li><a href="level_setup.html">-- Level Setup</a></li>
-                        </ul>
-                      </div>
-                    
-                    </li>
-                    <li><a  data-toggle="collapse" href="#userNoti" class="dropdown-toggle" aria-expanded="false" >
-                        <span class="mr-1"><i class="fas fa-bell"></i></span>   User Notification
-                         </a>
-                       
-                         <div class="collapse sub_drops" id="userNoti" data-parent="#accordion">
-                           <ul>
-                               <li><a href="noti_setup.html">-- Notification Setup</a></li>
-                            
-                           </ul>
-                         </div>
-                       
-                       </li>
-                       <li><a  data-toggle="collapse" href="#administrator" class="dropdown-toggle" aria-expanded="false" >
-                        <span class="mr-1"><i class="fas fa-user-cog"></i></span>  Administrator
-                         </a>
-                       
-                         <div class="collapse sub_drops" id="administrator" data-parent="#accordion">
-                           <ul>
-                               <li><a href="user_info.html">-- User Info</a></li>
-                               <li><a href="user_group_previleze.html">-- Group Previlege</a></li>
-                               <li><a href="user_permission.html">-- User Permission</a></li>
-                               <li><a href="user_group.html">-- User Group</a></li>
-                           </ul>
-                         </div>
-                       
-                       </li>
-                </ul>
-            </div>
-        </nav>
-          <!-- sidebar section end -->
+             </ul>
+         </div>
+        </div>
+     </nav>
+       <!-- sidebar section end -->
 
 
         <!-- Content body part start -->
         <div class="main_content_body">
-            <div class="top_header_part">
-                <div class="top_header_left">
-                    <p>Welcome to fortune</p>
-                </div>
-                <div class="top_header_right">
-                    <ul>
-                        <li>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <span class="mr-1"><i class="far fa-bell"></i></span> Notification
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    
-                                </div>
-                              </div>
-                        </li>
-                        <li>
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Administrator
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#">Profile</a>
-                                  <a class="dropdown-item" href="#">Change Password</a>
-                                  <a class="dropdown-item" href="#"><span class="mr-1"><i class="fas fa-power-off"></i></span>Logout</a>
-                                </div>
-                              </div>
-                        </li>
-                    </ul>
-    
-                </div>
-            </div>
             <header class="content_main_header">
-                <nav class="navbar navbar-expand-lg custom_nav_header py-0">
+                <section class="top_header_part">
+                   <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-md-6">
+                        <div class="top_header_left">
+                            <p>Welcome to fortune</p>
+                        </div>
+                       </div>
+                       <div class="col-md-6">
+                        <div class="top_header_right" id="align_play">
+                            <ul>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         <span class="mr-1"><i class="far fa-bell"></i></span> Notification
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            
+                                        </div>
+                                      </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Administrator
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">Profile</a>
+                                          <a class="dropdown-item" href="#">Change Password</a>
+                                          <a class="dropdown-item" href="#"><span class="mr-1"><i class="fas fa-power-off"></i></span>Logout</a>
+                                        </div>
+                                      </div>
+                                </li>
+                            </ul>
+            
+                        </div>
+                       </div>
+                    
+                   </div>
+                   </div>
+                </section>
+                <nav class="navbar navbar-expand-lg custom_nav_header">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12 my-0">
+                            <div class="col-md-12 my-0" >
                                 <div class="nav_btn_body">
                                     <ul>
                                         <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" onclick="toggleSidebar()">
-                                                <div id="nav-icon1">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <span>Menu</span>
-                                            </a></li>
-                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn">
-                                                <div id="nav-icon1">
-                                                    <i class="fas fa-clipboard-list"></i>
-                                                </div>
-                                                <span>Report</span>
-                                            </a></li>
-                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn">
-                                                <div id="nav-icon1">
-                                                    <i class="fas fa-download"></i>
-                                                </div>
-                                                <span>Backup</span>
-                                            </a></li>
+                                            <div id="nav-icon1">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <span>Menu</span>
+                                        </a></li>
+                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" >
+                                            <div id="nav-icon1">
+                                                <i class="fas fa-clipboard-list"></i>
+                                            </div>
+                                            <span>Report</span>
+                                        </a></li>
+                                        <li><a id="sidebarCollapse" class="btn btn-danger menu_btn" >
+                                            <div id="nav-icon1">
+                                                <i class="fas fa-download"></i>
+                                            </div>
+                                            <span>Backup</span>
+                                        </a></li>
                                     </ul>
-
+        
                                 </div>
                             </div>
                         </div>

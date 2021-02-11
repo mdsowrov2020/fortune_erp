@@ -1,3 +1,12 @@
+function toggleSidebar() {
+  var sidebarDiv = document.getElementById('sidebar');
+  var icon = document.getElementById('nav-icon1');
+  var align = document.getElementById('align_play');
+  sidebarDiv.classList.toggle('active');
+  icon.classList.toggle('open');
+  align.classList.toggle('add_right_align');
+}
+
 var coll = document.getElementsByClassName('collapsible');
 var i;
 
@@ -12,43 +21,6 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-
-// clock
-
-// function clock() {
-//   var hours = document.getElementById('hour');
-//   var minute = document.getElementById('minute');
-//   var seconds = document.getElementById('seconds');
-//   var AmPm = document.getElementById('ampms');
-//   var h = new Date().getHours();
-//   var m = new Date().getMinutes();
-//   var s = new Date().getSeconds();
-
-//   hours.innerHTML = h;
-//   minute.innerHTML = m;
-//   seconds.innerHTML = s;
-
-//   function checkTime(i) {
-//     if (i < 10) {
-//       i = '0' + i;
-//     }
-//     return i;
-//   }
-
-//   if (hours > 12) {
-//     hours = hours - 12;
-//     if (hours == 12) {
-//       hours = checkTime(hours);
-//       document.getElementById('seconds').innerHTML = ' AM';
-//     } else {
-//       hours = checkTime(hours);
-//       document.getElementById('seconds').innerHTML = ' PM';
-//     }
-//   } else {
-//     document.getElementById('seconds').innerHTML = ' AM';
-//   }
-// }
-// var interval = setInterval(clock, 1000);
 
 function digi() {
   var date = new Date(),
